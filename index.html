@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sally Student</title>
+</head>
+<body>
+<div id='application-root'></div>
+<script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+<script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script type="text/babel">
+
+    const sallyImage = `https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg`;
+    const mailto = `mailto:sally.student@gmail.com?subject=Opportunity`;
+    const email = `sally.student@gmail.com`;
+    const mapLink = `https://goo.gl/maps/RaBJFqpdfm92`;
+    const maptab = `_blank`;
+    const address = `Via Antonio Cavalieri Ducati, 3, 40132 Bologna BO, Italy`;
+
+    function App(props) {
+        console.log(props)
+        return (
+            <div>
+                {props.children}
+            </div>
+        );
+    }
+
+    // Nested elements inside the App
+    ReactDOM.render(
+        <App className='my-class'>
+            <header>
+                <h1>Sally Student</h1>
+                <img src= {sallyImage }></img>
+                <address>
+                    <p><a href={mailto}> { email } </a></p>
+                    <p><a href={ mapLink } target={ maptab }> { address } </a></p>
+                </address>
+            </header>
+            <main>
+                <section>
+                    <header>
+                        <h2>Summary</h2>
+                    </header>
+                    <p>Accomplished technology professional with diverse experience across start-up and corporate
+                        software development environment.</p>
+                </section>
+                <section>
+                    <header>
+                        <h2>Experiance</h2>
+                    </header>
+                    <h3>Ducati Motorcycles: Lead Software Engineer</h3>
+                    <time dateTime="2016-01-01">2016</time>
+                    - <time dateTime="2019-04-01">Present</time>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veritatis sed laborum,
+                        accusantium ut dolore asperiores.</p>
+                    <ul>
+                        <li>consectetur adipisicing elit.</li>
+                        <li>Id cupiditate, voluptatibus veniam.</li>
+                        <li>Quae architecto maxime asperiores qui voluptate.</li>
+                    </ul>
+                    <h3>Bugatti, Inc: Software Developer II </h3>
+                    <i>
+                        <time dateTime="2013-01-01">2013</time>
+                        - <time dateTime="2016-01-01">2016</time></i>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veritatis sed laborum,
+                        accusantium ut dolore asperiores ea enim, hic fuga corporis? Id cupiditate, voluptatibus veniam
+                        doloribus consectetur quia! Quae, eveniet?</p>
+                    <ul>
+                        <li>consectetur adipisicing elit.</li>
+                        <li>Id cupiditate, voluptatibus veniam.</li>
+                        <li>Quae architecto maxime asperiores qui voluptate.</li>
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <h2>Education</h2>
+                    </header>
+                    <h3>University of Bologna</h3>
+                    <time dateTime="2010-01-01">2010</time>
+                    - <time dateTime="2014-01-01">2014</time>
+                    <p>Graduated Valedictorian</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae veritatis sed laborum,
+                        accusantium ut dolore asperiores ea enim, hic fuga corporis? Id cupiditate, voluptatibus veniam
+                        doloribus consectetur quia! Quae, eveniet?</p>
+                </section>
+            </main>
+
+        </App>,
+        document.querySelector('#application-root')
+    );
+
+
+</script>
+</body>
+</html>
